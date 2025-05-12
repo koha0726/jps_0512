@@ -15,6 +15,20 @@
 	
 	<%-- 簡単な計算結果を式で表示 --%>
 	<p>10 + 20 = <%= 10 + 20 %></p>
+	
+	<%
+		int hour = new java.util.Date().getHours();
+		String greeting;
+		
+		if (hour < 12) {
+			greeting = "おはようございます";
+		} else if (hour < 18) {
+			greeting = "こんにちは";
+		} else {
+			greeting = "こんばんは";
+		}
+	%>
+	<p><%= greeting %></p>	
 
 </body>
 </html>
